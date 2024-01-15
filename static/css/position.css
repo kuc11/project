@@ -1,0 +1,277 @@
+*{
+  padding:0; 
+  margin:0;
+  box-sizing:border-box;
+}
+#wrap{
+  position:relative;
+  width:1920px;
+  height:3100px;
+}
+#header{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+}
+/*간편가입*/
+#join ,#nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  
+  width: 1920px;
+}
+#join{     
+  position: relative;
+  justify-content: center;
+  padding: 10px;
+  height: 75px;
+  left: 0px;
+  top: 0px;
+  background: #000000; 
+  font-size: 48px;
+  line-height: 60px;
+  color: #FFFFFF;
+}
+#nav{
+  justify-content: space-between;
+  padding: 10px 0px;
+  height: 75px;
+  left: 0px;
+  top: 0px;
+  position:sticky;
+  margin-top:5px;
+  z-index:100;
+}
+#menu1,#menu2,#menu3,#menu4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #909090;
+}
+#menu1{
+  width: 100px;
+  height: 60px;
+
+}
+i{
+  font-size: 60px;
+}
+#menu2{
+  flex-direction: row;
+  padding:10px 0px;
+  gap: 10px;
+  margin: 10px auto;
+  width: 1020px;
+  height: 60px;
+  font-size: 50px;
+  line-height: 97px;
+  color: #FFFFFF;
+  font-family:'Courier New', Courier, monospace;
+}
+
+/* 로그인 | 회원가입 */
+#menu3{
+  flex-direction: row;
+  padding: 0px;
+  gap: 10px;
+  margin: 0 auto;
+  width: 300px;
+  height: 60px;
+  font-size: 24px;
+  line-height: 44px;
+  color: #FFFFFF;
+}
+
+/* 장바구니/최근본항목 */
+#menu4{
+  flex-direction: row;
+  padding: 9px 0px;
+  gap: 10px;
+  width: 390px;
+  height: 60px;
+  font-size: 20px;
+  line-height: 44px;
+  color: #FFFFFF;
+}
+
+
+/* 내용 */
+#content{
+  position:relative;
+  top : 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  gap: 20px;
+
+  margin: 0 auto;
+  width: 1320px;
+  height: 1800px;
+  z-index:1;
+}
+/* All */
+#slideshow-container{
+  width: 1320px;
+  height: 500px;
+
+  background: #ECE5B6;
+  overflow:hidden;
+  z-index:20px;
+}
+.slides {
+    height:400px;
+    display: flex;
+    transition: transform 1s ease-in-out;
+    
+  }
+
+  .slide {
+    min-width: 100%;
+  }
+
+  .slide img {
+    width: 100%;
+  }
+
+  #arrowButton{
+    position: absolute;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    top: 230px;
+    width:100%;
+    height:100px;
+  }
+  .arrow{
+   width:100px;
+   height:100%;
+   z-index:200;
+  }
+  .previous{
+    cursor: pointer;
+    width: 50%;
+    color: blue;
+    font-weight: bold;
+    font-size: 18px;
+    text-align:left;
+    transition: 0.6s ease;
+    border-radius: 0px;
+  }
+  .next {
+    cursor: pointer;
+    width: 50%;
+    color: blue;
+    font-weight: bold;
+    font-size: 18px;
+    text-align:right;
+    transition: 0.6s ease;
+    border-radius: 0px;
+  }
+  .previous:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+
+
+/*상품목록*/
+#best_product,#best_review{
+width:100%;
+height:600px;
+background:white;
+}
+.best{
+width: 297px;
+height: 80px;
+
+font-family: 'Inder';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 80px;
+/* identical to box height */
+
+text-align:center;
+background-color: #909090;
+color: #FFFFFF;
+}
+.product_list{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px 40px;
+gap: 50px;
+
+width: 1320px;
+height: 440px;
+left: 0px;
+top: 120px;
+background-color: #ECE5B6;
+}
+.imgBox1, .imgBox2{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+
+width: 250px;
+height: 380px;
+background: #FFFFFF;
+}
+.textBox{
+width: 250px;
+height: 100px;
+background-color: #909090;
+color: #000000;
+line-height: 100px;
+text-align: center;
+font-family: 'Inder';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+}
+
+
+
+/*바닥글*/
+#foot{
+  position: absolute;
+  padding: 300px 300px;
+  width: 1414px;
+  height: 649px;
+  bottom:0px;
+}
+#footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 40px;
+  width: 1414px;
+  height: 351px;
+  background: #909090;
+}
+.footer1{
+  position:relative;
+  width: 550px;
+  height: 250px;
+  background: #ECE5B6;
+}  
+.footer1_content{
+ position: absolute;
+  width: 454px;
+  height: 200px;
+  left: 25px;
+  top: 20px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: #000000;
+}
