@@ -115,12 +115,12 @@ $('#sortPrice').click(function(){
     layout(productsPrice);
     $('.write').css('background','#909090');
 })
-
+  
     $('#revert').click( function(){
     $('#items').html('');
     layout(products);
 })
-
+ 
 $('#filterPrice').click(function(){
     let proudctsFilter = products.filter(function(item){
         return item.price <=20000;
