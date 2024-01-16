@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cart</title>
+  <!--부트 스트랩-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<!-- jquery-->
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="./static/javascript/slide.js"></script>
+<link rel="stylesheet" href="./static/css/cart.css">
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">
+        <div id="join">카카오톡 1초 간편가입</div>
+        <div id="nav">
+            <div id="menu1">
+                <i class="bi bi-list"></i>
+                <div id="menu"> 
+                    <div class='menu_list'>ALL</div>
+                    <div class='menu_list'><a href="purchase.html">카테고리별</a></div>
+                    <div class='menu_list2'>
+                        <div class='menu_detail'>토너</div>
+                        <div class='menu_detail'>세럼</div>
+                        <div class='menu_detail'>스킨로션</div>
+                    </div>
+                    <div class='menu_list'><a href="FQA.html">FQA</a></div>
+                    <div class='menu_list'><a href="notice.html">NOTICE</a></div>
+                  </div>
+            </div>
+            <div id="menu2">DW_gromming</div>
+            <div id="menu3">로그인 | 회원가입</div>
+            <div id="menu4"><a href="cart.html">장바구니 <i class="bi bi-cart"></i> </a>| 최근항목목록</div>
+        </div>
+    </div>
+
+    <div id="content">
+      <div class="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cartItems">
+        </ul>
+        <p>Total: 원<span id="totalPrice">0</span></p>
+      </div>
+      <div id="items"></div>
+    </div>
+
+    <div id="foot">
+      <div id="footer">
+          <div id="footer1">
+              <div id="footer1_content">
+              상호 : 주식회사 DW미디어       대표자 : ㅇㅇㅇ<br>
+              주소 : (34838) 대전광역시 중구 중앙로 121번길 20<br>
+              (선화동 41) 2층<br>
+              대표전화 : 042-222-2402<br>       
+              대중교통 : 1호선 중앙로역<br>
+                              버스노선 / 1, 201, 202, 2002, 101, 311<br>
+                              ,313, 317, 511, 514, 603, 604, 606, 614<br>
+                              ,615, 620, 701, 802<br>
+              </div>
+          </div>
+          <div id="footer1">
+              <div id="footer1_content">
+                  CS  CENTER<br>
+                  010-1111-2222<br>
+                  <br>
+                  cs운영시간 10:00~ 17:30(주말, 공휴일 휴무)<br>
+                  점심시간 12:30~13:30
+                  </div>
+          </div>
+      </div>
+  </div>
+
+  </div>
+<script>
+  var products = [
+    { id : 0, price:23800, title:'딥멜라케어 앰플' },
+    { id : 1, price:23900, title:'스팟 트리트먼트 오인트겔' },
+    { id : 2, price:16500, title:'아쿠아 라이스 약산성 클렌징폼' },
+    { id : 3, price:12900, title:'세라마이드 더마 속보습 스킨' },
+    { id : 4, price:15900, title:'세라마이드샷 앰플' },
+    { id : 5, price:17800, title:'솔리드인 세라마이드 크림' },
+    { id : 6, price:13900, title:'저분자 하일루론산 세럼' },
+    { id : 7, price:14000, title:'하일루론산 토너' },
+    { id : 8, price:10500, title:'초저분자 히알루론산 클렌징' }
+]
+  var total = 0;
+  var jsonString = localStorage.getItem('myObject');
+
+  // Convert JSON string to object
+  var receivedObject = JSON.parse(jsonString);
+
+  // Display the received object
+  console.log(receivedObject);
+  updateCart(receivedObject);
+
+  function updateCart(receivedObject) {
+      var cartList = document.getElementById('cartItems');
+      var totalPriceElement = document.getElementById('totalPrice');
+
+      // Clear previous items
+      cartList.innerHTML = '';
+
+      // Populate cart items
+      receivedObject.forEach(function (item) {
+        var li = document.createElement('li');
+        li.textContent = item.name + ' - 원' + item.price;
+        cartList.appendChild(li);
+        total += item.price;
+      });
+      
+      // Update total price
+      totalPriceElement.textContent = total.toFixed(2);
+      layout(receivedObject);
+    }
+
+  function layout(products){
+    products.forEach(product => {
+        let template = `
+        <div class='card'>
+            <img src="./static/images/${product.title}.jpg" alt="${product.title}">
+            <div class="card-body">
+                <div class="write"><b>${product.title}<br>가격: ${product.price}</b></div>
+            </div>
+            <input type="checkbox" id="product${product.id}"> <label for="product${product.id}">${product.id}-${product.price}</label>
+        </div>
+        `
+        $('#items').append(template);
+    });
+}
+</script>
+</body>
+</html>
