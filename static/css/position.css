@@ -21,7 +21,6 @@
   flex-direction: row;
   align-items: center;
   gap: 10px;
-  
   width: 1920px;
 }
 #join{     
@@ -55,8 +54,8 @@
 #menu1{
   width: 100px;
   height: 60px;
-
 }
+
 i{
   font-size: 60px;
 }
@@ -97,12 +96,63 @@ i{
   line-height: 44px;
   color: #FFFFFF;
 }
+/* 메뉴판 */
+#menu{
+  position:absolute;
+  top:80px;
+  left:0;
+  display:none;
+}
+/* #menu{
+  display: none;
+} */
+#menu1:hover #menu{
+  display:block;
+}
 
+.menu_list{
+  margin-left:2px;
+  border: 1px solid black; 
+  width:200px;;
+  height:60px;
+  background-color: #909090;
+  color:white;
+  font-size: 24px;
+  line-height: 60px;
+  padding: 0px 20px;
+  font-weight: bold;
+}
+.menu_list2{
+  display:block;
+  margin-left:2px;
+  width:200px;
+  height:180px;
+  /* list-style-type :disc; */
+}
+.menu_detail{
+  /* list-style-type :disc; */
+  width:200px;;
+  height:60px;
+  font-size: 18px;
+  line-height: 60px;
+  padding: 0px 30px;
+  background-color: #909090;
+  color:white;
+  border-right: 1px solid black;
+  border-left: 1px solid black;  
+}
+.menu_detail:nth-child(1){
+  border-top: 1px solid black;
+}
+.menu_detail:nth-child(3){
+  border-bottom: 1px solid black;
+}
 
 /* 내용 */
 #content{
-  position:relative;
+  position:absolute;
   top : 180px;
+  left : 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
