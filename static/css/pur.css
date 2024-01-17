@@ -3,6 +3,9 @@
     margin:0;
     box-sizing:border-box;
 }
+a{
+    text-decoration-style:none;
+}
 #wrap{
     position:relative;
     width:1920px;
@@ -162,14 +165,14 @@ i{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 200px 300px 0px;
+    padding: 0px 300px;
     gap: 10px;
 
     position: absolute;
     width: 1920px;
     height: 2800px;
     left: 0px;
-    top: 300px;
+    top: 200px;
 }
 /* All */
 #subject{
@@ -184,32 +187,46 @@ i{
 #sort{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding: 100px 30px 10px;
+    justify-content: end;
+    align-items: center;
+    padding: 100px 0px;;
     gap: 10px;
     width: 1320px;
     height: 211px;
 }
-
-/* 정렬 */
-.subsort{
+.subsort1{
+    width:75%;
+    height: 211px;
+    display:flex;
+    flex-direction: start;
+    align-items:center;
+}
+.subsort1 button{
+    padding: 10px 90px;
+}
+.subsort2{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 10px 10px;
     gap: 10px;
-    width: 150px;
-    height: 51px;
-    background: #88ACA0;
+    width: 50%;
+    height: 211px;
+
+    
+}
+/* 정렬 */
+.subsort3{
+    width: 130px;
+    height: 92px;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
-    line-height: 31px;
+    line-height: 92px;
     text-align: center;
-    color: #FFFFFF;
-    border:#D9D9D9 1px solid;
+    color: #745050;
+    border: #000000 1px solid;
 }
 
 
@@ -217,10 +234,12 @@ i{
 /*상품목록*/
 #items{
     display: flex;
-    justify-content:space-between;
     flex-wrap:wrap;
-    padding: 10px 30px;
-    gap: 10px;
+    justify-content:space-between;
+    align-items: center;
+    
+    padding: 10px 0px;
+    gap: 0px;
 
     width: 1320px;
     height: 1660px;
@@ -228,36 +247,47 @@ i{
 }
 /*상품 1~3행 */
 .card{
-    width:30%;
+    width:33.3%;
+    border-bottom: #cfcdcd 1px solid;
 }
-.card button{
-    padding: 10px 90px;
+.card:nth-child(1),.card:nth-child(2),.card:nth-child(3){
+    border-top: #cfcdcd 1px solid;
 }
-
-#row1_img{
+.cardImg{
+    width:100%;
+    height:400px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    padding: 0px 15px;
-    gap: 30px;
-    width: 1260px;
-    height: 400px;
-} 
-.img{
-    width: 300px;
-    height: 400px;
-    background:#D9D9D9;
 }
-/*상품 1행 이름 및 가격*/
-.write{
-    width: 300px;
-    height: 100px;
+
+/*상품 이름 및 가격*/
+.prodTitle{
+    width: 100%;
+    height: 50px;
     font-weight: 400;
     font-size: 25px;
-    line-height: 31px;
+    line-height: 50px;
     text-align: center;
     color: #000000;
+    padding: 15px 0px;
+}
+.price{
+    width: 100%;
+    height: 30px;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    color: red;
+}
+.card-body input{
+    position:relative;
+    bottom:35px;
+    left:25px; 
+    width:20px;
+    height:20px;
+    
 }
 label{
     display:none;
