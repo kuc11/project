@@ -6,7 +6,7 @@
 #wrap{
   position:relative;
   width:1920px;
-  height:3100px;
+  height:3300px;
 }
 #header{
   position: absolute;
@@ -161,12 +161,13 @@
 
   margin: 0 auto;
   width: 1320px;
-  height: 1800px;
+  height: 2800px;
   z-index:1;
 }
 /* All */
 #slideshow-container{
   width: 1320px;
+  height: 800px;
   overflow:hidden;
   border-bottom: 1px solid #909090;
 
@@ -282,16 +283,24 @@ font-family: 'Inder';
 font-style: normal;
 padding: 10px 10px;
 }
- 
-
+/* 동영상 링크 */ 
+#stream{
+  width:1320px;
+  height:500px;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  top:2000px;
+}
 
 /*바닥글*/
 #foot{
   position: absolute;
-  padding: 300px 300px;
+  padding: 10px 300px;
   width: 1414px;
   height: 649px;
-  bottom:0px;
+  bottom:-100px;
 }
 #footer{
   display: flex;
@@ -322,6 +331,8 @@ padding: 10px 10px;
   color: #000000;
 }
 
+
+
 a {
   color:inherit;
   text-decoration: none;
@@ -330,10 +341,13 @@ a {
 i{
   font-size: 40px;
 }
+
+
+
 /* modal */
 #modal_screen{
   width:1920px;
-  height:1600px;
+  height:100px;
 }
 #my_modal {
   display: none;
