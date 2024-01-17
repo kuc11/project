@@ -1,20 +1,15 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    
-}
+    margin:0; padding:0; box-sizing:border-box;
+} 
 #wrap{
     position:relative;
     width:1920px;
-    height:1650px;
-    display:flex;
-    flex-direction:row;
+    height:3100px;
 }
 #header{
     position:absolute;
     width: 100%;
-    height: 150px;
+    height: 100%;;
     left: 0px;
     top: 0px;
 }
@@ -54,27 +49,24 @@
     justify-content: center;
     align-items: center;
     background: #909090;
+    border-radius:10px;
 }
 #menu1{
     width: 100px;
     height: 60px;
-  
-}
-i{
-    font-size: 60px;
 }
 #menu2{
     flex-direction: row;
     padding:10px 0px;
     gap: 10px;
     margin: 10px auto;
-    width: 1020px;
+    width: 1120px;
     height: 60px;
     font-size: 50px;
     line-height: 97px;
     color: #FFFFFF;
     font-family:'Courier New', Courier, monospace;
-}
+  }
 
 /* 로그인 | 회원가입 */
 #menu3{
@@ -82,25 +74,75 @@ i{
     padding: 0px;
     gap: 10px;
     margin: 0 auto;
-    width: 300px;
+    width: 370px;
     height: 60px;
-    font-size: 24px;
+    font-size: 36px;
     line-height: 44px;
     color: #FFFFFF;
-}
-
-/* 장바구니/최근본항목 */
+  }
+  
+  /* 장바구니/최근본항목 */
 #menu4{
     flex-direction: row;
     padding: 9px 0px;
     gap: 10px;
-    width: 390px;
+    width: 290px;
     height: 60px;
     font-size: 20px;
     line-height: 44px;
-    color: #FFFFFF;}
-
-
+    color: #FFFFFF;
+}
+/* 메뉴판 */
+#menu{
+    position:absolute;
+    top:69px;
+    left:0;
+    display:none;
+  }
+  /* #menu{
+    display: none;
+  } */
+  #menu1:hover #menu{
+    display:block;
+  }
+  
+  .menu_list{
+    margin-left:2px;
+    border: 1px solid black; 
+    width:200px;;
+    height:60px;
+    background-color: #909090;
+    color:white;
+    font-size: 24px;
+    line-height: 60px;
+    padding: 0px 20px;
+    font-weight: bold;
+  }
+  .menu_list2{
+    display:block;
+    margin-left:2px;
+    width:200px;
+    height:240px;
+    /* list-style-type :disc; */
+  }
+  .menu_detail{
+    /* list-style-type :disc; */
+    width:200px;;
+    height:60px;
+    font-size: 18px;
+    line-height: 60px;
+    padding: 0px 40px;
+    background-color: #909090;
+    color:white;
+    border-right: 0.5px solid black;
+    border-left: 0.5px solid black;  
+  }
+  .menu_detail:nth-child(1){
+    border-top: 0.5px solid black;
+  }
+  .menu_detail:nth-child(4){
+    border-bottom: 0.5px solid black;
+  } 
 
 
 /* 공지사항 */
@@ -283,3 +325,12 @@ table td{
 .event_table_row{
     display:table-row;
 }
+
+a {
+    color:inherit;
+    text-decoration: none;
+  }
+  
+  i{
+    font-size: 40px;
+  }
