@@ -18,24 +18,24 @@
           <div id="nav">
               <div id="menu1">
                 <i class="bi bi-list"></i>
-
                 <div id="menu"> 
-                  <div class='menu_list'>ALL</div>
-                  <div class='menu_list'><a href="purchase.html">카테고리별</a></div>
+                  <div class='menu_list'><a href="purchase.html">ALL</a></div>
+                  <div div class='menu_list'>카테고리</div>
                   <div class='menu_list2'>
-                      <div class='menu_detail'>토너</div>
-                      <div class='menu_detail'>세럼</div>
-                      <div class='menu_detail'>스킨로션</div>
+                    <div class='menu_detail'><a href="purchase_1.html">스킨케어</a></div>
+                    <div class='menu_detail'><a href="purchase_2.html">클렌징</a></div>
+                    <div class='menu_detail'>선케어</div>
+                    <div class='menu_detail'>스페셜 케어</div>
                   </div>
                   <div class='menu_list'><a href="FQA.html">FQA</a></div>
                   <div class='menu_list'><a href="notice.html">NOTICE</a></div>
                 </div>
               </div>
 
-              <div id="menu2">DW_grooming</div>
-              <div id="menu3">로그인 | 회원가입</div>
-              <div id="menu4"><a href="cart.html">장바구니 <i class="bi bi-cart"></i> </a>| 최근항목목록</div>
-          </div>
+              <div id="menu2"><a href="project.html">DW_grooming</a></div>
+              <div id="menu3"> login | join </div>
+              <div id="menu4"><a href="cart.html"><i class="bi bi-cart"></i> </a> | <i class="bi bi-search-heart"></i></div>
+          </div> 
           
       </div>
       
@@ -45,27 +45,35 @@
             
             <ul id="arrowButton">
               <div class='arrow'>
-                <div class='previous' onclick="plusSlides(-1)">
-                    <i class="bi bi-arrow-left-square-fill"></i>
-                </div>
+                <button class='previous' onclick="prevSlide()">
+                  <i class="bi bi-caret-left"></i>
+                </button>
               </div>
               <div class='arrow'>
-                <div class='next' onclick="plusSlides(1)">
-                    <i class="bi bi-arrow-right-square-fill"></i>
-                </div>
+                <button class='next' onclick="nextSlide()">
+                  <i class="bi bi-caret-right"></i>
+                </button>
               </div>
             </ul>
 
-
-            <div class="slides">
+            <div id="slider" class="slides">
               <div class="slide">
                 <img src="./static/images/image1.jpg" alt="Image 1">
               </div>
               <div class="slide">
-                <img src="./static/images/image1.jpg" alt="Image 2">
+                <img src="./static/images/image2.jpg" alt="Image 2">
+              </div>
+              <div class="slide">
+                <img src="./static/images/image3.jpg" alt="Image 3">
               </div>
               <div class="slide">
                 <img src="./static/images/image1.jpg" alt="Image 3">
+              </div>
+              <div class="slide">
+                <img src="./static/images/image2.jpg" alt="Image 3">
+              </div>
+              <div class="slide">
+                <img src="./static/images/image3.jpg" alt="Image 3">
               </div>
             </div>
           
@@ -81,8 +89,18 @@
           <div id="best_product">
               <div class="best">베스트 상품</div>
               <div class="product_list">
-                <div class="imgBox1"><div class="img1">
-                  <img src="./static/images/아크 앰플.jpg" alt="아크 앰플"></div><div class="textBox">피부 케어</div></div>
+                <div class="imgBox1">
+                  <div class="img1">
+                    <img src="./static/images/아크 앰플.jpg" alt="아크 앰플">
+                  </div>
+                  <div class="textBox">
+                    <strong class="tit1">
+                      <span style="font-size:18px; color:#2e2e2e;font-weight:bold;">[복합성,수부지] 에스네이처 아쿠아 라이스 약산성 클렌징폼</span>
+                    </strong>
+                    <br>
+                    <span style="font-size:18px; color:#2e2e2e;">24,000원 </span><span style="font-size:18px; color:#2e2e2e;">16,500원 </span>
+                  </div>
+                </div>
                 <div class="imgBox1"><div class="img1">
                   <img src="./static/images/오아시스 수분 젤크림.jpg" alt="오아시스 수분 젤크림"></div><div class="textBox">수분 크림</div></div>
                 <div class="imgBox1"><div class="img1">
@@ -131,37 +149,98 @@
             </div>
         </div>
   </div>
+  <div id="modal_screen">
+    <div id="my_modal">
+        <div id="border">
+            <span id="title"><b>DW_gromming</b></span> 
+            <div id="coupon">
+                <div id="sale"><b>20%</b></div>
+                <div id="sale_content">1만원 이상 구매시 최대, 1.5만원 할인</div>
+            </div>
+            <div id="coupon_content">
+                <span><strong>대상</strong>홈페이지에서 첫 구매 회원일 경우!!!!</span>
+                <span><strong>사용 기간</strong>발급일 포함 3일</span>
+                <span><strong>혜택 보상</strong>중복 지급 불가</span>
+            </div>
+            <span id="close_bth_border"><a class="modal_close_btn">닫기</a></span>
+        </div>
+    </div>
 
 
 <script>
   
-  var slideIndex = 0;
-  showSlides();
- 
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-  function showSlides() {
-    var i;
-    var slides = document.querySelector(".slides");
-    var slide = document.querySelectorAll(".slide");
+  let currentIndex = 0;
+  const totalSlides = document.querySelectorAll('.slide').length;
+  const slider = document.getElementById('slider');
+  //updateSlider();
 
-    if (slideIndex >= slide.length) {
-      slideIndex = 0;
-    }
-
-    if (slideIndex < 0) {
-      slideIndex = slide.length - 1;
-    }
-
-    slides.style.transform = "translateX(" + (-slideIndex * 100) + "%)";
-
-    slideIndex++;
-
-    setTimeout(showSlides, 3000); // 3초 간격으로 전환
+  function updateSlider() {
+    slider.style.transform = `translateX(${-currentIndex * 1320}px)`;
   }
 
- 
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlider();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateSlider();
+  }
+
+  setInterval(nextSlide, 5000); // 1초마다 자동 슬라이드
+
+  window.onload=function(){
+            modal('my_modal');
+    }
+function modal(id) {
+    var zIndex = 9999;
+    var modal = document.getElementById(id);
+
+    // 모달 div 뒤에 희끄무레한 레이어
+    var bg = document.createElement('div');
+    bg.setStyle({
+        position: 'fixed',
+        zIndex: zIndex,
+        left: '0px',
+        top: '0px',
+        width: '100%',
+        height: '100%',
+        overflow: 'auto',
+        // 레이어 색갈은 여기서 바꾸면 됨
+        backgroundColor: 'rgba(0,0,0,0.4)'
+    });
+    document.body.append(bg);
+
+    // 닫기 버튼 처리, 시꺼먼 레이어와 모달 div 지우기
+    modal.querySelector('.modal_close_btn').addEventListener('click', function() {
+        bg.remove();
+        modal.style.display = 'none';
+    });
+
+    modal.setStyle({
+        position: 'fixed',
+        display: 'block',
+        boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+
+        // 시꺼먼 레이어 보다 한칸 위에 보이기
+        zIndex: zIndex + 1,
+
+        // div center 정렬
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        msTransform: 'translate(-50%, -50%)',
+        webkitTransform: 'translate(-50%, -50%)'
+    });
+}
+
+// Element 에 style 한번에 오브젝트로 설정하는 함수 추가
+Element.prototype.setStyle = function(styles) {
+    for (var k in styles) this.style[k] = styles[k];
+    return this;
+};
+
 </script>
 </body>
 </html>
