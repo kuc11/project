@@ -30,7 +30,7 @@
                     <div class='menu_list'><a href="notice.html">NOTICE</a></div>
                   </div>
             </div>
-            <div id="menu2">DW_gromming</div>
+            <div id="menu2"><a href="project.html">DW Grooming </a></div>
             <div id="menu3">로그인 | 회원가입</div>
             <div id="menu4"><a href="cart.html">장바구니 <i class="bi bi-cart"></i> </a>| 최근항목목록</div>
         </div>
@@ -86,13 +86,13 @@
     { id : 8, price:10500, title:'초저분자 히알루론산 클렌징' }
 ]
   var total = 0;
+  var leng = 0;
   var jsonString = localStorage.getItem('myObject');
 
   // Convert JSON string to object
   var receivedObject = JSON.parse(jsonString);
 
   // Display the received object
-  console.log(receivedObject);
   updateCart(receivedObject);
 
   function updateCart(receivedObject) {
@@ -105,7 +105,7 @@
       // Populate cart items
       receivedObject.forEach(function (item) {
         var li = document.createElement('li');
-        li.textContent = item.name + ' - 원' + item.price;
+        li.textContent = item.title + ' : ' + item.price +'원';
         cartList.appendChild(li);
         total += item.price;
       });
@@ -114,16 +114,17 @@
       totalPriceElement.textContent = total.toFixed(2);
       layout(receivedObject);
     }
-
   function layout(products){
+    // leng = parseInt(100 / length(products));
+    // alert(leng);
     products.forEach(product => {
         let template = `
-        <div class='card'>
-            <img src="./static/images/${product.title}.jpg" alt="${product.title}">
+        <div class='card' >
+          <div class='cardImg'><img src="./static/images/${product.title}.jpg" alt="${product.title}"></div>
             <div class="card-body">
-                <div class="write"><b>${product.title}<br>가격: ${product.price}</b></div>
+                <div class="prodTitle"><b>${product.title}<br></b></div>
+                <div class="price"><b>${product.price}원</b></div>
             </div>
-            <input type="checkbox" id="product${product.id}"> <label for="product${product.id}">${product.id}-${product.price}</label>
         </div>
         `
         $('#items').append(template);

@@ -171,6 +171,65 @@ i{
   padding: 10px;
   margin-top: 20px;
 }
+#items{
+  display: flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  padding: 10px 30px;
+  gap: 10px;
+
+  width: 1320px;
+  height: 1660px;
+  background:#FFFFFF;
+}
+/*상품 1~3행 */
+.card{
+  width:30%;
+}
+/* .card:nth-child(1),.card:nth-child(2),.card:nth-child(3){
+  border-top: #cfcdcd 1px solid;
+} */
+
+
+.cardImg{
+  width:100%;
+  height:400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+/*상품 이름 및 가격*/
+.prodTitle{
+  width: 100%;
+  height: 50px;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 50px;
+  text-align: center;
+  color: #000000;
+  padding: 15px 0px;
+}
+.price{
+  width: 100%;
+  height: 30px;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  color: red;
+}
+.card-body input{
+  position:relative;
+  bottom:35px;
+  left:25px; 
+  width:20px;
+  height:20px;
+  
+}
+label{
+  display:none;
+}
+
 
 
 
