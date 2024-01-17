@@ -1,0 +1,168 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    
+}
+#wrap{
+    width:1920px;
+    height:1650px;
+    position:relative;
+}
+#header{
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    position:absolute;
+}
+/*간편가입*/
+#join ,#nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    
+    width: 1920px;
+}
+#join{     
+    position: relative;
+    justify-content: center;
+    padding: 10px;
+    height: 75px;
+    left: 0px;
+    top: 0px;
+    background: #000000; 
+    font-size: 48px;
+    line-height: 60px;
+    color: #FFFFFF;
+}
+#nav{
+    justify-content: space-between;
+    padding: 10px 0px;
+    height: 75px;
+    left: 0px;
+    top: 0px;
+    position:sticky;
+    margin-top:5px;
+    z-index:1;
+}
+#menu1,#menu2,#menu3,#menu4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #909090;
+}
+#menu1{
+    width: 100px;
+    height: 60px;
+  
+}
+i{
+    font-size: 60px;
+}
+#menu2{
+    flex-direction: row;
+    padding:10px 0px;
+    gap: 10px;
+    margin: 10px auto;
+    width: 1020px;
+    height: 60px;
+    font-size: 50px;
+    line-height: 97px;
+    color: #FFFFFF;
+    font-family:'Courier New', Courier, monospace;
+}
+
+/* 로그인 | 회원가입 */
+#menu3{
+    flex-direction: row;
+    padding: 0px;
+    gap: 10px;
+    margin: 0 auto;
+    width: 300px;
+    height: 60px;
+    font-size: 24px;
+    line-height: 44px;
+    color: #FFFFFF;
+}
+
+/* 장바구니/최근본항목 */
+#menu4{
+    flex-direction: row;
+    padding: 9px 0px;
+    gap: 10px;
+    width: 390px;
+    height: 60px;
+    font-size: 20px;
+    line-height: 44px;
+    color: #FFFFFF;}
+
+
+
+
+/* 본 내용 */
+ #content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 350px 150px 0px 150px;
+    gap: 100px;
+    width: 1920px;
+    height: 100%;
+    position:relative;
+    top:200px;
+     
+} 
+
+#subtitle{
+    width:100%;
+    height:100px;
+    font-size:50px;
+    text-align:center;
+
+}
+
+#container{
+    width:100%;
+    height:800px;
+    border-top:1px solid #000000;
+    padding:30px 75px 0px 75px;
+    display:flex;
+    flex-direction: column;
+}
+
+.event{
+    display:inline-block;
+    background:#FFCF7E;
+    color:#ffffff;
+    width:90px;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+    margin-right:20px;
+    border-radius:25px;
+    font-size:20px;
+}
+ul{
+    list-style-type:none;
+    padding: 15px;
+}
+#subject{font-size:30px;}
+
+#company_name{
+ margin:0px 20px 0px 110px;
+}
+
+#gray{
+    color:#909090;
+    font-size:20px;
+}
+
+#detail{
+    width:100%;
+    height:100%;
+    padding: 30px 15px 15px 15px;
+    border-top:1px dashed #909090;
+    font-size:20px;
+}
