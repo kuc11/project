@@ -17,26 +17,27 @@
             <div id="join">카카오톡 1초 간편가입</div>
             <div id="nav">
                 <div id="menu1">
-                    <i class="bi bi-list"></i>
-                
-                    <div id="menu"> 
-                        <div class='menu_list'><a href="purchase.html">ALL</a></div>
-                        <div class='menu_list'>카테고리별</div>
-                        <div class='menu_list2'>
-                            <div class='menu_detail'>토너</div>
-                            <div class='menu_detail'>세럼</div>
-                            <div class='menu_detail'>스킨로션</div>
-                        </div>
-                        <div class='menu_list'><a href="FQA.html">FQA</a></div>
-                        <div class='menu_list'><a href="notice.html">NOTICE</a></div>
-                      </div>
-
-
+                  <i class="bi bi-list"></i>
+  
+                  <div id="menu"> 
+                    <div class='menu_list'><a href="purchase.html">ALL</a></div>
+                    <div div class='menu_list'>카테고리</div>
+                    <div class='menu_list2'>
+                      <div class='menu_detail'><a href="purchase_1.html">스킨케어</a></div>
+                      <div class='menu_detail'><a href="purchase_2.html">클렌징</a></div>
+                      <div class='menu_detail'>선케어</div>
+                      <div class='menu_detail'>스페셜 케어</div>
+                    </div>
+                    <div class='menu_list'><a href="FQA.html">FQA</a></div>
+                    <div class='menu_list'><a href="notice.html">NOTICE</a></div>
+                  </div>
                 </div>
-                <div id="menu2"><a href="project.html">DW Grooming </a></div>
-                <div id="menu3">로그인 | 회원가입</div>
-                <div id="menu4"><a href="cart.html">장바구니 <i class="bi bi-cart"></i> </a>| 최근항목목록</div>
-            </div>
+  
+                <div id="menu2"><a href="project.html">DW_grooming</a></div>
+                <div id="menu3"> login | join </div>
+                <div id="menu4"><a href="cart.html"><i class="bi bi-cart"></i> </a> | <i class="bi bi-search-heart"></i></div>
+            </div> 
+            
         </div>
 
         <div id="content">
@@ -97,7 +98,6 @@ var products = [
     { id : 8, price:10500, title:'초저분자 히알루론산 클렌징' }
 ]
 layout(products);
-
 
 $('#sortLow').click(function(){
     let productsPrice = products.slice();
@@ -179,7 +179,15 @@ function addToCart(productName, price){
     // Redirect to the second HTML page
     window.location.href = "cart.html";
 }
-
+function adjHeight(){
+  var leng = 0 ;
+  leng = Object.keys(products).length;
+  var tmpLeng = parseInt(leng/3);
+  if(tmpLeng == 0) $('#items').heigth('553');
+  else if(tmpLeng == 1) $('#items').heigth('1106');
+  else if(tmpLeng == 2) $('#items').heigth('1659');
+  else $('#items').heigth('2213');
+}
 </script>
 
 
