@@ -4,11 +4,19 @@
   font-weight: 500;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Giants-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Giants-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
 *{
   padding:0; 
   margin:0;
   box-sizing:border-box;
 }
+
+
 #wrap{
   position:relative;
   width:1920px;
@@ -71,8 +79,8 @@
   height: 60px;
   font-size: 50px;
   line-height: 97px;
-  color: #FFFFFF;
-  font-family:'Courier New', Courier, monospace;
+  color: #909090;
+
 }
 
 /* 로그인 | 회원가입 */
@@ -85,7 +93,7 @@
   height: 60px;
   font-size: 36px;
   line-height: 44px;
-  color: #FFFFFF;
+  color: #000;
 }
 
 /* 장바구니/최근본항목 */
