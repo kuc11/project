@@ -16,7 +16,6 @@
   box-sizing:border-box;
 }
 
-
 #wrap{
   position:relative;
   width:1920px;
@@ -79,8 +78,8 @@
   height: 60px;
   font-size: 50px;
   line-height: 97px;
-  color: #909090;
-
+  color: #FFFFFF;
+  font-family:'Courier New', Courier, monospace;
 }
 
 /* 로그인 | 회원가입 */
@@ -93,7 +92,7 @@
   height: 60px;
   font-size: 36px;
   line-height: 44px;
-  color: #000;
+  color: #FFFFFF;
 }
 
 /* 장바구니/최근본항목 */
