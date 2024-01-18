@@ -71,7 +71,7 @@
   height: 60px;
   font-size: 50px;
   line-height: 97px;
-  color: #FFFFFF;
+  color: black;
   font-family:'Courier New', Courier, monospace;
 }
 
@@ -85,7 +85,7 @@
   height: 60px;
   font-size: 36px;
   line-height: 44px;
-  color: #FFFFFF;
+  color: black;
 }
 
 /* 장바구니/최근본항목 */
@@ -97,7 +97,7 @@
   height: 60px;
   font-size: 20px;
   line-height: 44px;
-  color: #FFFFFF;
+  color: rgb(223,201,188);
 }
 
 /* 메뉴판 */
@@ -119,7 +119,7 @@
   border: 1px solid black; 
   width:200px;;
   height:60px;
-  background-color: #909090;
+  background-color: rgb(223,201,188);
   color:white;
   font-size: 24px;
   line-height: 60px;
@@ -140,7 +140,7 @@
   font-size: 18px;
   line-height: 60px;
   padding: 0px 40px;
-  background-color: #909090;
+  background-color: rgb(223,201,188);;
   color:white;
   border-right: 0.5px solid black;
   border-left: 0.5px solid black;  
@@ -420,6 +420,7 @@ a {
 
 i{
   font-size: 40px;
+  color: black;
 }
 
 
