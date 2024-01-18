@@ -15,7 +15,7 @@
   margin:0;
   box-sizing:border-box;
 }
-
+#menu2,#menu3{font-family: 'Giants-Bold';}
 #wrap{
   position:relative;
   width:1920px;
@@ -79,7 +79,7 @@
   font-size: 50px;
   line-height: 97px;
   color: #000;
-  font-family:'Courier New', Courier, monospace;
+
 }
 
 /* 로그인 | 회원가입 */
