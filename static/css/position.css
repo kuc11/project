@@ -4,6 +4,13 @@
   font-weight: 500;
   font-style: normal;
 }
+@font-face {
+  font-family: 'SUIT-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+#menu2,#menu3{font-family:'SUIT-Regular';}
 *{
   padding:0; 
   margin:0;
@@ -72,11 +79,10 @@
   margin: 10px auto;
   width: 1120px;
   height: 60px;
-  font-size: 50px;
+  font-size: 40px;
   line-height: 97px;
 
   color: black;
-  font-family:'Courier New', Courier, monospace;
 }
 
 /* 로그인 | 회원가입 */
