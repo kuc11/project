@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'EASTARJET-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/EASTARJET-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+  }
 *{
     padding:0; 
     margin:0;
@@ -7,7 +13,7 @@
 #wrap{
     position:relative;
     width:1920px;
-    height:3100px;
+    height:2800px;
 }
 #header{
     position: absolute;
@@ -296,14 +302,11 @@ label{
 
 /*바닥글*/
 #foot{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0px;
-    gap: 10px;
-    width: 1414px;
-    height: 649px;
+    position:absolute;
+    bottom: 0px;
+    width:1610px;
+    height:400px;
+
 }
 #footer{
     display: flex;
@@ -311,28 +314,51 @@ label{
     justify-content: center;
     align-items: center;
     padding: 50px;
-    gap: 40px;
-    width: 1414px;
-    height: 351px;
-    background: #909090;
-}
-#footer1{
-    position:relative;
-    width: 550px;
-    height: 250px;
-    background: #ECE5B6;
-}  
-#footer1_content{
-   position: absolute;
-    width: 454px;
-    height: 200px;
-    left: 25px;
-    top: 20px;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 25px;
-    color: #000000;
-}
+    gap: 60px;
+    width: 100%;
+    height: 100%;
+    background: #677381;
+    }
+    .footer1{
+        width:600px;
+        height:300px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    .footer1_content{
+      font-size:20px;
+      color:#fff;
+      font-family: 'EASTARJET-Medium';
+      /* Arial, Helvetica, sans-serif */
+     
+    }
+    #footer1_img{
+      width:400px;
+      height:50px;
+      background:#fff;
+      display:flex;
+      flex-direction:row;
+      align-items:center;
+      justify-content:space-around;
+      color:#9F9F9F;
+      font-size:17px;
+      margin-top:20px;
+    }
+    .img_text{
+      display:flex;
+      align-items:center;
+    }
+    .img_text img{
+      width:25px;
+      height:25px;
+      margin-right:10px;
+      filter: opacity(0.5) drop-shadow(0 0 0 rgb(189,189,189)); 
+      
+    }
+
+    
+
 a {
     color:inherit;
     text-decoration: none;
