@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>purchase.html</title>
     <link rel="stylesheet" href="./static/css/pur.css">
     <!--부트스트랩-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
@@ -17,35 +17,41 @@
             <div id="join">카카오톡 1초 간편가입</div>
             <div id="nav">
                 <div id="menu1">
-                    <i class="bi bi-list"></i>
-                
-                    <div id="menu"> 
-                        <div class='menu_list'>ALL</div>
-                        <div class='menu_list'><a href="purchase.html">카테고리별</a></div>
-                        <div class='menu_list2'>
-                            <div class='menu_detail'>토너</div>
-                            <div class='menu_detail'>세럼</div>
-                            <div class='menu_detail'>스킨로션</div>
-                        </div>
-                        <div class='menu_list'><a href="FQA.html">FQA</a></div>
-                        <div class='menu_list'><a href="notice.html">NOTICE</a></div>
-                      </div>
-
-
+                  <i class="bi bi-list"></i>
+  
+                  <div id="menu"> 
+                    <div class='menu_list'><a href="purchase.html">ALL</a></div>
+                    <div div class='menu_list'>카테고리</div>
+                    <div class='menu_list2'>
+                      <div class='menu_detail'><a href="purchase_1.html">스킨케어</a></div>
+                      <div class='menu_detail'><a href="purchase_2.html">클렌징</a></div>
+                      <div class='menu_detail'>선케어</div>
+                      <div class='menu_detail'>스페셜 케어</div>
+                    </div>
+                    <div class='menu_list'><a href="FQA.html">FQA</a></div>
+                    <div class='menu_list'><a href="notice.html">NOTICE</a></div>
+                  </div>
                 </div>
-                <div id="menu2">DW_gromming</div>
-                <div id="menu3">로그인 | 회원가입</div>
-                <div id="menu4"><a href="cart.html">장바구니 <i class="bi bi-cart"></i> </a>| 최근항목목록</div>
-            </div>
+  
+                <div id="menu2"><a href="project.html">DW_grooming</a></div>
+                <div id="menu3"> login | join </div>
+                <div id="menu4"><a href="cart.html"><i class="bi bi-cart"></i> </a> | <i class="bi bi-search-heart"></i></div>
+            </div> 
+            
         </div>
 
         <div id="content">
             <div id="subject">ALL</div>
             <div id="sort">
-                <button class='subsort' id="sortLow">높은 가격순 정렬</button>
-                <button class='subsort' id="sortPrice">낮은 가격순 정렬</button>
-                <button class='subsort' id="filterPrice">2만원 이하 보기</button>
-                <button class='subsort' id="revert">원래대로</button>
+                <div class="subsort1">
+                    <button onclick="addToCart()"><i class="bi bi-cart"></i></button>
+                </div>
+                <div class="subsort2">
+                    <button class='subsort3' id="sortLow">높은 가격순 정렬</button>
+                    <button class='subsort3' id="sortPrice">낮은 가격순 정렬</button>
+                    <button class='subsort3' id="filterPrice">2만원 이하 보기</button>
+                    <button class='subsort3' id="revert">원래대로</button>
+                </div>
             </div>
             <div id="items">
                <!-- 자바스크립트 함수로 구현 -->
@@ -81,18 +87,17 @@
 
 <script>
 var products = [
-    { id : 0, price:23800, title:'딥멜라케어 앰플' },
-    { id : 1, price:23900, title:'스팟 트리트먼트 오인트겔' },
-    { id : 2, price:16500, title:'아쿠아 라이스 약산성 클렌징폼' },
-    { id : 3, price:12900, title:'세라마이드 더마 속보습 스킨' },
-    { id : 4, price:15900, title:'세라마이드샷 앰플' },
-    { id : 5, price:17800, title:'솔리드인 세라마이드 크림' },
-    { id : 6, price:13900, title:'저분자 하일루론산 세럼' },
-    { id : 7, price:14000, title:'하일루론산 토너' },
-    { id : 8, price:10500, title:'초저분자 히알루론산 클렌징' }
+    { id : 0, price:23800, title:'[마일드랩] 딥 멜라케어 앰플 50ml' },
+    { id : 1, price:23900, title:'[마일드랩] 딥 멜라케어 스팟 트리트먼트 오인트겔 30ml' },
+    { id : 2, price:16500, title:'[에스네이처] 아쿠아 라이스 클렌징오일 200ml' },
+    { id : 3, price:12900, title:'[일리윤] 세라마이드 더마 속보습 스킨 180ml' },
+    { id : 4, price:15900, title:'[앰플엔] 세라마이드샷 앰플 100ml' },
+    { id : 5, price:17800, title:'[토리든] 솔리드인 세라마이드 크림 70ml' },
+    { id : 6, price:13900, title:'[토리든] 다이브인 저분자 히알루론산 세럼 75ml' },
+    { id : 7, price:14000, title:'[이즈앤트리] 초저분자 히알루론산 토너' },
+    { id : 8, price:10500, title:'[건성추천] 토리든 다이브인 초저분자 히알루론산 클렌징 폼' }
 ]
 layout(products);
-
 
 $('#sortLow').click(function(){
     let productsPrice = products.slice();
@@ -115,12 +120,12 @@ $('#sortPrice').click(function(){
     layout(productsPrice);
     $('.write').css('background','#909090');
 })
-
+  
     $('#revert').click( function(){
     $('#items').html('');
     layout(products);
 })
-
+ 
 $('#filterPrice').click(function(){
     let proudctsFilter = products.filter(function(item){
         return item.price <=20000;
@@ -134,12 +139,12 @@ function layout(products){
     products.forEach(product => {
         let template = `
         <div class='card'>
-            <img src="./static/images/${product.title}.jpg" alt="${product.title}">
+            <div class='cardImg'><img src="./static/images/${product.title}.jpg" alt="${product.title}"></div>
             <div class="card-body">
-                <div class="write"><b>${product.title}<br>가격: ${product.price}</b></div>
+                <div class="prodTitle"><b>${product.title}<br></b></div>
+                <div class="price"><b>${product.price}원</b></div>
+                <input type="checkbox" id="product${product.id}"> <label for="product${product.id}">${product.id}-${product.price}-${product.title}</label>        
             </div>
-            <input type="checkbox" id="product${product.id}"> <label for="product${product.id}">${product.id}-${product.price}-${product.title}</label>
-            <button onclick="addToCart()"><i class="bi bi-cart"></i></button>
         </div>
         `
         $('#items').append(template);
@@ -174,7 +179,15 @@ function addToCart(productName, price){
     // Redirect to the second HTML page
     window.location.href = "cart.html";
 }
-
+function adjHeight(){
+  var leng = 0 ;
+  leng = Object.keys(products).length;
+  var tmpLeng = parseInt(leng/3);
+  if(tmpLeng == 0) $('#items').heigth('553');
+  else if(tmpLeng == 1) $('#items').heigth('1106');
+  else if(tmpLeng == 2) $('#items').heigth('1659');
+  else $('#items').heigth('2213');
+}
 </script>
 
 

@@ -11,23 +11,42 @@
 
     <!--부트스트랩-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <script src="./static/javascirpt/fqa.js"></script>
+    <script src="./static/javascript/fqa.js"></script>
 
 </head>
 <body>
     <div id="wrap">
-            <div id="header">
-                <div id="join">카카오톡 1초 간편가입</div>
-                <div id="nav">
-                    <div id="menu1"><i class="bi bi-list"></i></div>
-                    <div id="menu2">DW_gromming</div>
-                    <div id="menu3">로그인|회원가입</div>
-                    <div id="menu4">장바구니/최근항목목록</div>
+        <div id="header">
+            <div id="join">카카오톡 1초 간편가입</div>
+            <div id="nav">
+                <div id="menu1">
+                  <i class="bi bi-list"></i>
+                  <div id="menu"> 
+                    <div class='menu_list'><a href="purchase.html">ALL</a></div>
+                    <div div class='menu_list'>카테고리</div>
+                    <div class='menu_list2'>
+                      <div class='menu_detail'><a href="purchase_1.html">스킨케어</a></div>
+                      <div class='menu_detail'><a href="purchase_2.html">클렌징</a></div>
+                      <div class='menu_detail'>선케어</div>
+                      <div class='menu_detail'>스페셜 케어</div>
+                    </div>
+                    <div class='menu_list'><a href="FQA.html">FQA</a></div>
+                    <div class='menu_list'><a href="notice.html">NOTICE</a></div>
+                  </div>
                 </div>
-            </div>
+  
+                <div id="menu2"><a href="project.html">DW_grooming</a></div>
+                <div id="menu3"> login | join </div>
+                <div id="menu4"><a href="cart.html"><i class="bi bi-cart"></i> </a> | <i class="bi bi-search-heart"></i></div>
+            </div> 
+            
+        </div>
             <div id="content">
-                <div id="FQA">
-                FQA    
+                <div id="sitelink">
+                    <!--onclick ="location.href='index.html'"-->
+                    <!-- <div id="FQA_site"><a href="#" onclick="location.href='FQA.html'">FQA</a></div> -->
+                    <div id="FQA_site">FQA</div>
+                    <div id="notice_site"><a href="#" onclick="window.open('notice.html')">공지사항</a></div>
                 </div>
                 <div id = question>
                     <div id="question_sort">
@@ -93,7 +112,6 @@
                                           <p>비욘드그루밍 스토어는 가장 안전한 100% 정품 배송을 위해, 브랜드별 공식 개별 배송을 진행하고 있습니다.
                                             따라서, 고객님 단순 변심에 의한 반품 시 각 제품별 배송비 각 6,000원이 부과됩니다. (브랜드별)
                                             단, 상품 불량 및 오배송으로 인한 반품 시 배송비는 부과되지 않습니다.</p>
-                                            <button id="open" onclick="detail()"><i class="bi bi-caret-down"></i></button>
                                         </div>
                                     </div>
                             </li>
@@ -102,7 +120,6 @@
                                         <div class="title"><span class="label">Q.</span><span class="type"> [반품/교환]</span> 배송중에 취소가 가능한가요?</div>
                                         <div class="answer"><br>
                                           <p>이미 출고되어 배송중인 상태의 주문건은 취소가 불가합니다.</p>
-                                            <button id="open" onclick="detail()"><i class="bi bi-caret-down"></i></button>
                                         </div>
                                     </div>
                             </li>
@@ -116,7 +133,6 @@
                                             2) 고객님의 사용 또는 일부 소비에 의하여 상품 가치가 훼손(파손)된 경우
                                             
                                             3) 시간의 경과에 따라 재판매가 곤란해질 정도로 상품의 가치가 현히 감소한 경우</p>
-                                            <button id="open" onclick="detail()"><i class="bi bi-caret-down"></i></button>
                                         </div>
                                     </div>
                             </li>
@@ -125,7 +141,6 @@
                                         <div class="title"><span class="label">Q.</span><span class="type"> [상품/주문/결제/취소]</span> 주문한 상품을 취소하고 싶은데 어떻게 하면 되나요?</div>
                                         <div class="answer"><br>
                                           <p>주문건이 ‘입금/결제 전’ 또는 ‘상품준비중’ 상태인 경우에 한해 취소 처리가 가능합니다. 마이페이지 -> 주문내역에서 취소하실 수 있습니다.</p>
-                                            <button id="open" onclick="detail()"><i class="bi bi-caret-down"></i></button>
                                         </div>
                                     </div>
                             </li>
@@ -137,7 +152,6 @@
                                             시일이 경과하여도 확인되지 않으실 경우에는 해당 카드사에 문의 부탁드립니다.
                                             
                                             무통장입금 환불의 경우 1~2일 이내에 처리됩니다.</p>
-                                            <button id="open" onclick="detail()"><i class="bi bi-caret-down"></i></button>
                                         </div>
                                     </div>
                             </li>
@@ -146,7 +160,6 @@
                                         <div class="title"><span class="label">Q.</span><span class="type"> [회원/사이트/기타]</span> 아이디와 비밀번호를 잊어버렸습니다.</div>
                                         <div class="answer"><br>
                                           <p>로그인 화면에 있는 아이디 찾기/비밀번호 찾기를 클릭해주세요. 비회원 주문 후 주문 내역 조회가 어려우신 경우에는 CS 센터에 문의 부탁드립니다.</p>
-                                            <button id="open" onclick="detail()"><i class="bi bi-caret-down"></i></button>
                                         </div>
                                     </div>
 
@@ -154,8 +167,53 @@
                         </ul>
                     </div>
                 </div>
+                <div id="foot">
+                    <div id="footer">
+                        <div class="footer1"> 
+                            <div class="footer1_content">
+                              상호 : 주식회사 DW미디어       <span style="margin-left:40px;">대표자 : ㅇㅇㅇ</span><br>
+                              <span style="margin-left:60px;">주소 : (34838) 대전광역시 중구 중앙로 121번길 20</span><br>
+                              <span style="margin-left:60px;">(선화동 41) 2층</span><br><br>
+                              대표전화 : 042-222-2402<br><br>      
+                              대중교통 : 1호선 중앙로역<br>
+                                              <span style="margin-left:100px;">버스노선 / 1, 201, 202, 2002, 101, 311<br></span>
+                                              <span style="margin-left:100px;">,313, 317, 511, 514, 603, 604, 606, 614<br></span>
+                                              <span style="margin-left:100px;">,615, 620, 701, 802<br></span>
+                              </div>
+                        </div>
+                        <div class="footer1">
+                            <div class="footer1_content" style="font-size:20px;">
+                                CS  CENTER<br>
+                                010-1111-2222<br>
+                                <br>
+                                cs운영시간 10:00~ 17:30(주말, 공휴일 휴무)<br>
+                                점심시간 12:30~13:30
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            </div>   
+    </div>
+    <div id="modal_screen">
+        <div id="my_modal">
+            <div id="border">
+                <span id="title"><b>DW_gromming</b></span> 
+                <div id="coupon">
+                    <div id="sale"><b>20%</b></div>
+                    <div id="sale_content">1만원 이상 구매시 최대, 1.5만원 할인</div>
+                </div>
+                <div id="coupon_content">
+                    <span><strong>대상</strong>홈페이지에서 첫 구매 회원일 경우!!!!</span>
+                    <span><strong>사용 기간</strong>발급일 포함 3일</span>
+                    <span><strong>혜택 보상</strong>중복 지급 불가</span>
+                </div>
+                <span id="close_bth_border"><a class="modal_close_btn">닫기</a></span>
+            </div>
+        </div>
+
+        <!-- <button id="popup_open_btn">팝업창 띄어 줘염</button> -->
+
     </div>
 </body>
 </html>
