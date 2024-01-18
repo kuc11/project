@@ -4,6 +4,12 @@
     font-weight: 500;
     font-style: normal;
   }
+  @font-face {
+    font-family: 'Giants-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Giants-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+  }
 *{
     padding:0; 
     margin:0;
@@ -121,7 +127,7 @@
   
 
 
-
+  #menu2,#menu3{font-family: 'Giants-Bold';}
   #menu2{
     flex-direction: row;
     padding:10px 0px;
@@ -131,8 +137,9 @@
     height: 60px;
     font-size: 50px;
     line-height: 97px;
+  
     color: black;
-    font-family:'Courier New', Courier, monospace;
+    
   }
   
   /* 로그인 | 회원가입 */
