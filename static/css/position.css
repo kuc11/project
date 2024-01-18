@@ -30,7 +30,7 @@
   height: 75px;
   left: 0px;
   top: 0px;
-  background: #000000; 
+  background: #8B735B; 
   font-size: 48px;
   line-height: 60px;
   color: #FFFFFF;
@@ -49,7 +49,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #909090;
+  background: rgb(223,201,188);
   border-radius:10px;
 }
 #menu1{
@@ -229,14 +229,18 @@
   }
   
 
-
+ 
 /*상품목록*/
-#best_product,#best_review{
+#best_product{
 width:100%;
-height:600px;
+height:500px;
 background:white;
+margin:100px;
 }
 #best_review{
+  width:100%;
+  height:650px;
+  background:white;
   border-bottom: 1px solid #909090;
 }
 .best{
@@ -251,23 +255,32 @@ line-height: 80px;
 /* identical to box height */
 
 text-align:center;
-background-color: #909090;
-color: #FFFFFF;
+background-color: rgb(223,201,188);
+color: #6acc66c0;
 }
 .product_list{
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 10px 40px;
-gap: 70px;
-
-width: 1320px;
-height: 440px;
-left: 0px;
-top: 120px;
-background-color: #ECE5B6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: top;
+  padding: 10px 40px;
+  gap: 70px;
+  }
+.product_list:nth-child(1){
+  width: 1320px;
+  height: 400px;
+  left: 0px;
+  top: 120px;
+  background-color: #000000;
 }
+.product_list:nth-child(2){
+  width: 1320px;
+  height: 510px;
+  left: 0px;
+  top: 120px;
+  background-color: rgba(223,201,188,0.3);
+  
+  }
 .imgBox1, .imgBox2{
 display: flex;
 flex-direction: column;
@@ -279,15 +292,50 @@ width: 250px;
 height: 380px;
 /* background: #FFFFFF; */
 }
-.textBox{
-width: 300px;
-height: 100px;
-/* background-color: #909090; */
-color: #000000;
-font-family: 'Inder';
-font-style: normal;
-padding: 10px 10px;
+
+.img1 img:hover, .img2 img:hover{
+  filter: brightness(0.8);
 }
+
+/* 상품 리뷰를 위한 텍스트 박스 */
+.textBox{
+  width: 300px;
+  height: 200px;
+  border: 1px #909090 solid;
+
+  padding: 10px 10px;
+}
+.textBox1{
+  width: 100%;
+  height: 80px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  color: #000000;
+  font-family: 'Inder';
+  font-style: normal;
+}
+.textBox1_img{
+  width:70px;
+  height:70px;
+  border-radius: 35px;
+  background-color: #ffffff;
+  border: 1px #909090 solid;
+  overflow: hidden;
+}
+.textBox1_img img{
+  width:100%;
+  height:100%;
+}
+
+.textBox2{
+  width:100%;
+  height:80px;
+  border-top:1px solid #909090;
+}
+
 /* 동영상 링크 */ 
 #stream{
   width:1320px;
@@ -296,7 +344,7 @@ padding: 10px 10px;
   flex-direction: row;
   justify-content: center;
   position: absolute;
-  top:2100px;
+  top:2300px;
 }
 
 /*바닥글*/

@@ -51,8 +51,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
+    background: #e0cf98;
+=======
     background: #909090;
     border-radius:10px;
+>>>>>>> 71a0c1bab7b29962550af9902187b0a4543cd520
 }
 #menu1{
     width: 100px;
@@ -285,7 +289,7 @@
 }
 .card-body input{
     position:relative;
-    bottom:25px;
+    bottom:30px;
     left:20px; 
     width:20px;
     height:20px;
@@ -334,6 +338,11 @@ label{
     line-height: 25px;
     color: #000000;
 }
+<<<<<<< HEAD
+ 
+
+
+=======
 
 a {
     color:inherit;
@@ -343,3 +352,4 @@ a {
   i{
     font-size: 40px;
   }
+>>>>>>> 71a0c1bab7b29962550af9902187b0a4543cd520
