@@ -12,6 +12,10 @@
 #wrap{
   position:relative;
   width:1920px;
+  height:3300px;
+  background-color: rgba(201, 140, 60, 0.1);
+  height:3400px;
+
 }
 #header{
   position: absolute;
@@ -38,8 +42,8 @@
   background: #8B735B; 
   font-size: 48px;
   line-height: 60px;
-  color: #FFFFFF;
-} 
+  color: #ebdc8ce7;
+}
 #nav{
   justify-content: space-between;
   padding: 10px 0px;
@@ -61,7 +65,6 @@
   width: 100px;
   height: 60px;
 }
-
 #menu2{
   flex-direction: row;
   padding:10px 0px;
@@ -71,7 +74,8 @@
   height: 60px;
   font-size: 50px;
   line-height: 97px;
-  color: #FFFFFF;
+
+  color: black;
   font-family:'Courier New', Courier, monospace;
 }
 
@@ -85,7 +89,7 @@
   height: 60px;
   font-size: 36px;
   line-height: 44px;
-  color: #FFFFFF;
+  color: black;
 }
 
 /* 장바구니/최근본항목 */
@@ -97,9 +101,8 @@
   height: 60px;
   font-size: 20px;
   line-height: 44px;
-  color: #FFFFFF;
+  color: black;
 }
-
 
 /* 메뉴판 */
 #menu{
@@ -120,8 +123,9 @@
   border: 1px solid black; 
   width:200px;;
   height:60px;
-  background-color: #909090;
-  color:white;
+  /* background-color: #f0b0d3da; */
+  background-color: rgb(223,201,188);
+  color: black;
   font-size: 24px;
   line-height: 60px;
   padding: 0px 20px;
@@ -141,8 +145,8 @@
   font-size: 18px;
   line-height: 60px;
   padding: 0px 40px;
-  background-color: #909090;
-  color:white;
+  color: black;
+  background-color: rgb(223,201,188);;
   border-right: 0.5px solid black;
   border-left: 0.5px solid black;  
 }

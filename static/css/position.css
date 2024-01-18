@@ -12,10 +12,8 @@
 #wrap{
   position:relative;
   width:1920px;
-
   height:3300px;
   background-color: rgba(201, 140, 60, 0.1);
-
   height:3400px;
 
 }
@@ -76,8 +74,6 @@
   height: 60px;
   font-size: 50px;
   line-height: 97px;
-
-  color: #ff008c;
 
   color: black;
   font-family:'Courier New', Courier, monospace;
@@ -356,10 +352,11 @@ height: 380px;
   width:1320px;
   height:500px;
   display:flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   position: absolute;
-  top:2300px;
+  top:2200px;
 }
 
 /*바닥글*/
