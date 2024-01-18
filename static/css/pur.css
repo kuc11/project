@@ -13,7 +13,7 @@
 #wrap{
     position:relative;
     width:1920px;
-    height:2800px;
+    height:2500px;
 }
 #header{
     position: absolute;
@@ -173,7 +173,7 @@
 
     position: absolute;
     width: 1920px;
-    height: 2800px;
+    height: 2350px;
     left: 0px;
     top: 200px;
 }
