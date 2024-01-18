@@ -299,7 +299,7 @@ height: 380px;
 /* background: #FFFFFF; */
 }
 
-.img1 img:hover, .img2 img:hover{
+.img1 img:hover, .img2 img:hover{ 
   filter: brightness(0.8);
 }
 
@@ -311,7 +311,7 @@ height: 380px;
 
   padding: 10px 10px;
 }
-.textBox1{
+.textBox1{ 
   width: 100%;
   height: 80px;
   display:flex;
