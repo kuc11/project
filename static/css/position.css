@@ -12,7 +12,12 @@
 #wrap{
   position:relative;
   width:1920px;
+
+  height:3300px;
+  background-color: rgba(201, 140, 60, 0.329);
+
   height:3400px;
+
 }
 #header{
   position: absolute;
@@ -39,7 +44,7 @@
   background: #8B735B; 
   font-size: 48px;
   line-height: 60px;
-  color: #FFFFFF;
+  color: #ebdc8ce7;
 }
 #nav{
   justify-content: space-between;
@@ -71,6 +76,9 @@
   height: 60px;
   font-size: 50px;
   line-height: 97px;
+
+  color: #ff008c;
+
   color: black;
   font-family:'Courier New', Courier, monospace;
 }
@@ -85,7 +93,7 @@
   height: 60px;
   font-size: 36px;
   line-height: 44px;
-  color: black;
+  color: #ff008c;
 }
 
 /* 장바구니/최근본항목 */
@@ -119,6 +127,7 @@
   border: 1px solid black; 
   width:200px;;
   height:60px;
+  background-color: #f0b0d3da;
   background-color: rgb(223,201,188);
   color:white;
   font-size: 24px;
@@ -140,8 +149,8 @@
   font-size: 18px;
   line-height: 60px;
   padding: 0px 40px;
+  color:#ffffffde;
   background-color: rgb(223,201,188);;
-  color:white;
   border-right: 0.5px solid black;
   border-left: 0.5px solid black;  
 }
@@ -233,15 +242,18 @@
   .previous:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.2);
   }
-  
 
  
 /*상품목록*/
 #best_product{
 width:100%;
 height:500px;
+
+background:rgb( 201, 140, 60, 0.329);
+
 background:white;
 margin:100px;
+
 }
 #best_review{
   width:100%;
@@ -262,7 +274,7 @@ line-height: 80px;
 
 text-align:center;
 background-color: rgb(223,201,188);
-color: #6acc66c0;
+color: #cc04043b;
 }
 .product_list{
   display: flex;
@@ -363,6 +375,17 @@ height: 380px;
   margin-left:155px;
 }
 #footer{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 40px;
+  width: 1414px;
+  height: 351px;
+  background: #ecb51e41;
+
 display: flex;
 flex-direction: row;
 justify-content: center;
@@ -372,6 +395,7 @@ gap: 60px;
 width: 100%;
 height: 100%;
 background: #677381;
+
 }
 .footer1{
   width:600px;
