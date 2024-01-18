@@ -29,7 +29,7 @@
     height: 75px;
     left: 0px;
     top: 0px;
-    background: #000000; 
+    background: #8B735B;  
     font-size: 48px;
     line-height: 60px;
     color: #FFFFFF;
@@ -48,9 +48,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #909090;
+    background: rgb(223,201,188);
     border-radius:10px;
-}
+  }
 #menu1{
     width: 100px;
     height: 60px;
