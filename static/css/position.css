@@ -316,9 +316,9 @@ height: 380px;
   height: 80px;
   display:flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
-
+  gap:10px;
   color: #000000;
   font-family: 'Inder';
   font-style: normal;
