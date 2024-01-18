@@ -413,4 +413,30 @@ background: #677381;
   color:#fff;
   font-family: 'EASTARJET-Medium';
   /* Arial, Helvetica, sans-serif */
+ 
 }
+#footer1_img{
+  width:400px;
+  height:50px;
+  background:#fff;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:space-around;
+  color:#9F9F9F;
+  font-size:17px;
+  margin-top:20px;
+}
+.img_text{
+  display:flex;
+  align-items:center;
+}
+.img_text img{
+  width:25px;
+  height:25px;
+  margin-right:10px;
+  filter: opacity(0.5) drop-shadow(0 0 0 rgb(189,189,189)); 
+  
+}
+
+  
