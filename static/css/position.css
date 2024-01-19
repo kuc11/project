@@ -10,6 +10,12 @@
   font-weight: 700;
   font-style: normal;
 }
+@font-face {
+  font-family: 'JalnanGothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 *{
   padding:0; 
   margin:0;
@@ -264,11 +270,11 @@
 width: 297px;
 height: 80px;
 
-font-family: 'Inder';
+font-family: 'JalnanGothic';
 font-style: normal;
 font-weight: 400;
-font-size: 48px;
-line-height: 80px;
+font-size: 36px;
+line-height:90px;
 /* identical to box height */
 
 text-align:center;
