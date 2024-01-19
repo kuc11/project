@@ -70,7 +70,31 @@
     height: 60px;
   
 }
+#menu2{
+  flex-direction: row;
+  padding:10px 0px;
+  gap: 10px;
+  margin: 10px auto;
+  width: 1120px;
+  height: 60px;
+  font-size: 40px;
+  line-height: 97px;
 
+  color: black;
+}
+
+/* 로그인 | 회원가입 */
+#menu3{
+  flex-direction: row;
+  padding: 0px;
+  gap: 10px;
+  margin: 0 auto;
+  width: 370px;
+  height: 60px;
+  font-size: 36px;
+  line-height: 44px;
+  color: black;
+}
 
 /* 다운 메뉴 */
 /* 메뉴판 */
