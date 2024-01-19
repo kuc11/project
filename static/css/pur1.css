@@ -71,6 +71,9 @@
   width: 100px;
   height: 60px;
 }
+
+#menu2,#menu3{font-family: 'Giants-Bold';}
+
 #menu2{
   flex-direction: row;
   padding:10px 0px;
@@ -83,21 +86,6 @@
 
   color: black;
 }
-#menu2,#menu3{font-family: 'Giants-Bold';}
-#menu2{
-  flex-direction: row;
-  padding:10px 0px;
-  gap: 10px;
-  margin: 10px auto;
-  width: 1120px;
-  height: 60px;
-  font-size: 50px;
-  line-height: 97px;
-
-  color: black;
-  
-}
-
 /* 로그인 | 회원가입 */
 #menu3{
   flex-direction: row;

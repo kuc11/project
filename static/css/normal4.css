@@ -9,12 +9,7 @@
     height:1650px;
     position:relative;
 }
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    
-}
+
 @font-face {
     font-family: 'EASTARJET-Medium';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/EASTARJET-Medium.woff2') format('woff2');

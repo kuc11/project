@@ -21,7 +21,7 @@
     height:1650px;
     position:relative;
 }
-#menu2,#menu3{font-family: 'Giants-Bold';}
+
 #wrap{
   position:relative;
   width:1920px;
@@ -78,6 +78,7 @@
   width: 100px;
   height: 60px;
 }
+#menu2,#menu3{font-family: 'Giants-Bold';}
 #menu2{
   flex-direction: row;
   padding:10px 0px;

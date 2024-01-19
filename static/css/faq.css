@@ -71,6 +71,7 @@
   width: 100px;
   height: 60px;
 }
+#menu2,#menu3{font-family: 'Giants-Bold';}
 #menu2{
   flex-direction: row;
   padding:10px 0px;
@@ -78,11 +79,11 @@
   margin: 10px auto;
   width: 1120px;
   height: 60px;
-  font-size: 50px;
+  font-size: 40px;
   line-height: 97px;
 
   color: black;
-  font-family:'Courier New', Courier, monospace;
+  
 }
 
 /* 로그인 | 회원가입 */
