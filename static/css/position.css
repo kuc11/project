@@ -360,7 +360,7 @@ height: 380px;
 }
 
 /* 동영상 링크 */ 
-#stream{
+/* #stream{
   width:1320px;
   height:500px;
   display:flex;
@@ -369,7 +369,7 @@ height: 380px;
   align-items: center;
   position: absolute;
   top:2200px;
-}
+} */
 
 /*바닥글*/
 
