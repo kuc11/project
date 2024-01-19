@@ -206,9 +206,11 @@
   display:flex;
   flex-direction: start;
   align-items:center;
+ 
 }
 .subsort1 button{
   padding: 10px 90px;
+  background-color: rgb(223,201,188);
 }
 .subsort2{
   display: flex;
@@ -233,9 +235,15 @@
   text-align: center;
   color: black;
   border: #000000 1px solid;
-  background-color: #8B735B;
+  background-color: rgb(223,201,188);
 }
-
+.subsort1 button, .subsort3{
+  border:none;
+  border-radius: 5px;
+}
+.subsort1 button:hover, .subsort3:hover{
+  cursor: pointer;
+}
 
 
 /*상품목록*/
